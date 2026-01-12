@@ -4,8 +4,8 @@ provider "aws" {
 
 
 resource "aws_instance" "myec2" {
-  ami           = "ami-068c0051b15cdb816"
-  instance_type = "t3.micro"
+  ami           = var.ami
+  instance_type = var.instance_type
   tags = {
     Name = "custom-module"
   }
